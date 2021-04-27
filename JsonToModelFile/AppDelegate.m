@@ -147,7 +147,8 @@
     [self analysisContainerString];
     NSString* className = self.classText.stringValue;
     if (className==nil||className.length<1) {
-        className=@"lqClass";
+        jsonTextView.string = @"请在上方输入框输入要保存的类名【ClassName】";
+        return;
     }
     className=[self stringToClassName:className];
     NSArray* keyArray = [dic allKeys];
